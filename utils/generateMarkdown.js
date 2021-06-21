@@ -39,7 +39,7 @@ function generateMarkdown(data) {
 
   # ${data.gitHubRepo} 
   
-  ## Table of Contents
+  ## Table of Content
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -59,8 +59,8 @@ function generateMarkdown(data) {
 
   ## Licence
   This application is covered by the following license:
-  * ${renderLicenseBadge(data.badges)} *
-  * ${renderLicenseLink(data.license.url)} *
+   ${renderLicenseBadge(data.badges)} 
+   ${renderLicenseLink(data.license.url)} 
 
   <br/>Email ${data.email} with any support questions at <a href="mailto:${data.accountEmail}">${data.accountEmail}</a><br>
   or visit my <a href="https://github.com/${data.gitHubName}">GitHub Homepage</a>.
