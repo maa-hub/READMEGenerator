@@ -5,7 +5,7 @@ function renderLicenseBadge(licenseBadge) {
     return '';
   }
   return `
-  ![badge](https://img.shields.io/badge/license-${data.badges}-brightgreen)
+  ![badge](https://img.shields.io/badge/license-${licenseBadge}-brightgreen)
 <br />`
 }
 
@@ -16,7 +16,7 @@ function renderLicenseLink(licenseLink) {
     return '';
   }
   return `
-  ${data.license.url} `
+  ${licenseLink} `
 }
 
 // TODO: Create a function that returns the license section of README
@@ -32,11 +32,21 @@ function renderLicenseSection(license) {
   `
 }
 
-
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
-  # ${data.projectTitle}
+  ## ${data.projectTitle} 
+
+  # ${data.gitHubRepo} 
+  
+  ## Table of Contents
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 
   ## Installation
   ${data.projectInstall}
@@ -49,8 +59,13 @@ function generateMarkdown(data) {
 
   ## Licence
   This application is covered by the following license:
-  ${renderLicenseSection(license)}
+  * ${renderLicenseBadge(data.badges)} *
+  * ${renderLicenseLink(data.license.url)} *
+
+  <br/>Email ${data.email} with any support questions at <a href="mailto:${data.accountEmail}">${data.accountEmail}</a><br>
+  or visit my <a href="https://github.com/${data.gitHubName}">GitHub Homepage</a>.
 `;
+
 }
 
 module.exports = generateMarkdown;
