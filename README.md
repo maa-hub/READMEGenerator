@@ -36,10 +36,10 @@ THEN I am taken to the corresponding section of the README
 
 
 # Link to README video 
-🎥 Full video tutorial can be found [here](./src/README tutorialvideo.webm) 
+🎥 Full video tutorial can be found [here](./src/READMEtutorialvideo.webm) 
 
 ## Contribution
 Made with ❤️ by Maame
 
-![alt text](./src/capture1)
-![alt text](./src/capture2)
+![alt text](./src/capture1.png)
+![alt text](./src/capture2.png)
